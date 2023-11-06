@@ -70,12 +70,12 @@ export default defineNuxtConfig({
                 {
                     hid: "og:url",
                     property: "og:url",
-                    content: `https://debug-lab.vercel.app`,
+                    content: `https://debuglab.vercel.app`,
                 },
                 {
                     hid: "og:title",
                     property: "og:title",
-                    content: `Debug Lab`,
+                    content: `Debug Lab: Student Centre`,
                 },
                 {
                     hid: "og:description",
@@ -101,7 +101,7 @@ export default defineNuxtConfig({
                 {
                     hid: "twitter:url",
                     property: "twitter:url",
-                    content: `https://debug-lab.vercel.app`,
+                    content: `https://debuglab.vercel.app`,
                 },
                 {
                     hid: "twitter:title",
