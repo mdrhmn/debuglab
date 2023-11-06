@@ -48,7 +48,7 @@ const onInvalidSubmit = ({ values, errors, results }: any) => {
                     </h1>
 
                     <p class="mt-3 text-xl text-gray-600 dark:text-gray-400">
-                        Please enter your username:
+                        Please enter your username to access your credentials.
                     </p>
 
                     <div class="mt-7 sm:mt-12 mx-auto max-w-xl relative">
