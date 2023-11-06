@@ -34,6 +34,11 @@ const onInvalidSubmit = ({ values, errors, results }: any) => {
 
 <template>
     <div>
+        <div class="absolute left-0 right-0 top-24 m-auto">
+            <Vue3Lottie animationLink="https://lottie.host/8fa54461-7cdf-45aa-b14e-7819b857f4d9/LvOgY41nLc.json"
+                :height="600" :width="400" />
+        </div>
+
         <!-- Hero -->
         <div class="relative overflow-hidden">
             <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-24">
