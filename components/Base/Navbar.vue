@@ -1,6 +1,7 @@
 
 <template>
-    <header class="sticky top-0 inset-x-0 sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 dark:bg-gray-800">
+    <header
+        class="sticky top-0 inset-x-0 sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 dark:bg-gray-800">
         <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
             <div class="flex items-center justify-between">
                 <NuxtLink class="inline-flex items-center gap-x-2 text-xl w-full font-semibold dark:text-white" to="/">
@@ -70,6 +71,10 @@
                         class="font-medium hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
                         aria-current="page">
                         Logbook</NuxtLink>
+                    <NuxtLink to="search-credentials" activeClass="text-orange-500 dark:text-white"
+                        class="font-medium hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
+                        aria-current="page">
+                        Students</NuxtLink>
                     <!-- <NuxtLink to="login" activeClass="text-orange-500 dark:text-white"
                         class="font-medium hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
                         aria-current="page">
