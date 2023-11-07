@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+td,
+th {
+    box-shadow: none !important;
+}
