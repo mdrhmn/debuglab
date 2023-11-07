@@ -110,7 +110,7 @@
                     <!-- List -->
                     <ul class="grid lg:grid-cols-5 lg:gap-5">
                         <!-- Item -->
-                        <li class="lg:col-span-2 lg:py-3">
+                        <li class="pt-6 lg:col-span-2 lg:py-3">
                             <span class="text-lg font-semibold text-gray-800 dark:text-gray-200">
                                 Class Availability Slots
                             </span>
