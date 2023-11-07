@@ -9,7 +9,7 @@
                     <NuxtLink to="/" class="hover:underline">Debug Lab</NuxtLink>. All Rights Reserved.
                 </span>
 
-                <div class="flex justify-between items-center">
+                <div class="mt-2 flex justify-between items-center">
                     <!-- Social Brands -->
                     <div class="space-x-4">
                         <a class="inline-block text-gray-500 hover:text-gray-800 dark:hover:text-gray-200" target="_blank"
