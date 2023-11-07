@@ -1,7 +1,7 @@
 <template>
     <!-- Comparison Table -->
     <div class="relative">
-        <div class="max-w-[85rem] px-4 py-5 sm:px-6 lg:px-8 md:py-8 lg:py-14 mx-auto">
+        <div class="max-w-[85rem] px-4 pb-5 sm:px-6 lg:px-8 md:pb-8 lg:pb-14 mx-auto">
             <!-- <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
                     <h2 class="text-2xl font-bold md:text-3xl md:leading-tight dark:text-white">Simple, transparent pricing
                     </h2>

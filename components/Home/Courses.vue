@@ -1,6 +1,6 @@
 <template>
     <!-- Features -->
-    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
+    <div class="max-w-[85rem] px-4 pt-10 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
         <div class="relative p-6 md:p-16">
             <!-- Grid -->
             <div class="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
