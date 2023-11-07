@@ -1,6 +1,6 @@
 
 <template>
-    <header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 dark:bg-gray-800">
+    <header class="sticky top-0 inset-x-0 sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 dark:bg-gray-800">
         <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
             <div class="flex items-center justify-between">
                 <NuxtLink class="inline-flex items-center gap-x-2 text-xl w-full font-semibold dark:text-white" to="/">
@@ -8,7 +8,6 @@
                 </NuxtLink>
 
                 <BaseDarkModeToggle />
-
 
                 <Menu v-if="session && Object.keys(session).length !== 0 && session.constructor === Object" as="div"
                     class="md:hidden lg:hidden relative inline-block text-left">
@@ -59,6 +58,7 @@
                     </button>
                 </div>
             </div>
+
             <div id="navbar-image-and-text-2"
                 class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
                 <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
@@ -66,6 +66,10 @@
                         class="font-medium hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
                         aria-current="page">
                         Home</NuxtLink>
+                    <NuxtLink to="logbook" activeClass="text-orange-500 dark:text-white"
+                        class="font-medium hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
+                        aria-current="page">
+                        Logbook</NuxtLink>
                     <!-- <NuxtLink to="login" activeClass="text-orange-500 dark:text-white"
                         class="font-medium hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
                         aria-current="page">
@@ -78,8 +82,43 @@
                         class="font-medium hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
                         aria-current="page">
                         Credentials</NuxtLink> -->
+                    <NuxtLink v-if="!session" to="login" activeClass="text-orange-500 dark:text-white"
+                        class="font-medium hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
+                        aria-current="page">
+                        Login</NuxtLink>
                 </div>
             </div>
+
+            <Menu v-if="session && Object.keys(session).length !== 0 && session.constructor === Object" as="div"
+                class="hidden md:inline-block relative text-left">
+                <div>
+                    <MenuButton
+                        class="w-max inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer dark:hover:bg-gray-700 dark:hover:text-white">
+                        {{ session?.user?.user_metadata?.first_name }}
+                        {{ session?.user?.user_metadata?.last_name }}
+                        <ChevronDownIcon class="ml-2 -mr-1 h-5 w-5 text-gray-900 dark:text-white" aria-hidden="true" />
+                    </MenuButton>
+                </div>
+
+                <transition enter-active-class="transition duration-100 ease-out"
+                    enter-from-class="transform scale-95 opacity-0" enter-to-class="transform scale-100 opacity-100"
+                    leave-active-class="transition duration-75 ease-in" leave-from-class="transform scale-100 opacity-100"
+                    leave-to-class="transform scale-95 opacity-0">
+                    <MenuItems style=" z-index: 999 !important;"
+                        class="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <div class="px-1 py-1">
+                            <MenuItem v-slot="{ active }">
+                            <button @click="signOut" :class="[
+                                active ? 'bg-orange-500 text-white' : 'text-gray-900',
+                                'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                            ]">
+                                Sign Out
+                            </button>
+                            </MenuItem>
+                        </div>
+                    </MenuItems>
+                </transition>
+            </Menu>
         </nav>
     </header>
 </template>
@@ -94,22 +133,7 @@ const authStore = useAuthStore();
 const session = computed(() => authStore.session);
 
 async function signOut() {
-    const { error } = await client.auth.signOut();
-    if (error) return;
-
-    // Reset store
-    authStore.$reset();
-
-    // Push notification
-    notify({
-        title: "Success",
-        text: "Logged out successfully",
-        type: "success",
-        group: "foo",
-    }, 4000)
-
-    // Redirect to Login page
-    await navigateTo('/login');
+    await navigateTo('/logout');
 }
 </script>
 
