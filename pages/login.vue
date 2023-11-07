@@ -49,22 +49,12 @@ const onSubmit = async (values: any) => {
 
         const { data: { user } } = await client.auth.getUser();
         const { data: { session } } = await client.auth.getSession();
-        const { data, error } = await client
-            .from('results')
-            .select()
-            .eq('id', user.id)
-
-        if (data?.length !== 0 && data)
-            authStore.$patch({ isLoggedIn: true, session: session });
-        else
-            authStore.$patch({ isLoggedIn: true, session: session });
-
-        const runtimeConfig = useRuntimeConfig();
+        authStore.$patch({ isLoggedIn: true, session: session });
 
         // Push notification
         notify({
             title: "Success",
-            text: "Signed in successfully",
+            text: "Logged in successfully",
             type: "success",
             group: "foo",
         }, 4000)
