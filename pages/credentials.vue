@@ -28,7 +28,7 @@ definePageMeta({
 });
 
 useHead({
-    title: 'Credentials | Debug Lab'
+    title: 'Coder Credentials | Debug Lab'
 })
 
 // Initialise client

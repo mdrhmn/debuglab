@@ -13,6 +13,8 @@
         <HomeCourses />
         <HomeSchedule />
         <HomeTestimonials />
+        <HomeCoaches />
+        <HomePDF />
     </div>
 </template>
 
