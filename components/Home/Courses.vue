@@ -120,28 +120,25 @@
                         <div>
                             <div id="tabs-with-card-1" role="tabpanel" aria-labelledby="tabs-with-card-item-1">
                                 <img class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
-                                    src="https://images.unsplash.com/photo-1605629921711-2f6b00c6bbf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80"
-                                    alt="Image Description">
+                                    src="~/assets/img/coding.jpeg" alt="Image Description">
                             </div>
 
                             <div id="tabs-with-card-2" class="hidden" role="tabpanel"
                                 aria-labelledby="tabs-with-card-item-2">
                                 <img class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
-                                    src="https://images.unsplash.com/photo-1665686306574-1ace09918530?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80"
-                                    alt="Image Description">
+                                    src="~/assets/img/3d-animation.jpeg" alt="Image Description">
                             </div>
 
                             <div id="tabs-with-card-3" class="hidden" role="tabpanel"
                                 aria-labelledby="tabs-with-card-item-3">
                                 <img class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
-                                    src="https://images.unsplash.com/photo-1598929213452-52d72f63e307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80"
-                                    alt="Image Description">
+                                    src="~/assets/img/game-web-dev.jpeg" alt="Image Description">
                             </div>
 
                             <div id="tabs-with-card-4" class="hidden" role="tabpanel"
                                 aria-labelledby="tabs-with-card-item-4">
                                 <img class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
-                                    src="~/assets/img/hero.png" alt="Image Description">
+                                    src="~/assets/img/3d-printing.jpeg" alt="Image Description">
                             </div>
                         </div>
                         <!-- End Tab Content -->
