@@ -12,7 +12,7 @@
                             role="alert">
                             <div class="flex p-4">
                                 <div class="flex-shrink-0">
-                                    <svg v-if="notification.type === 'info'" class="h-4 w-4 text-blue-500 mt-0.5"
+                                    <svg v-if="notification.type === 'info'" class="h-4 w-4 text-orange-500 mt-0.5"
                                         xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         viewBox="0 0 16 16">
                                         <path

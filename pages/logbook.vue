@@ -25,7 +25,7 @@
                                     <div class="inline-flex gap-x-2">
                                         <div class="flex justify-end gap-x-2">
                                             <select v-model="searchField"
-                                                class="py-2 px-3 pe-9 block w-64 border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
+                                                class="py-2 px-3 pe-9 block w-64 border-gray-200 rounded-lg text-sm focus:border-orange-500 focus:ring-orange-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
                                                 <option value="" disabled hidden>Class</option>
                                                 <option selected value="classes.title">Class</option>
                                                 <option value="coders.full_name">Name</option>
@@ -109,7 +109,7 @@
 
                                 <div class="hs-tooltip inline-block">
                                     <button type="button" @click="openDeleteModal(item)"
-                                        class="hs-tooltip-toggle py-1.5 px-2 inline-flex justify-center items-center gap-2 rounded-e-md text-gray-700 align-middle focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-gray-800 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
+                                        class="hs-tooltip-toggle py-1.5 px-2 inline-flex justify-center items-center gap-2 rounded-e-md text-gray-700 align-middle focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-orange-600 transition-all text-sm dark:bg-gray-800 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
                                         href="#">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
@@ -491,7 +491,8 @@
 
                                     <div class="mt-2">
                                         <p class="text-sm text-gray-500">
-                                            Are you sure you want to delete {{ selectedItem.coders.full_name }} logbook
+                                            Are you sure you want to delete <strong>{{ selectedItem.coders.full_name
+                                            }}</strong> logbook
                                             record?
                                         </p>
                                     </div>
