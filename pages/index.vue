@@ -14,7 +14,6 @@ const username = ref({
         .label("Username"),
 });
 
-
 // Handle successful form submission
 const onSubmit = async (values: any) => {
     const formResult = values
@@ -27,13 +26,12 @@ const onInvalidSubmit = ({ values, errors, results }: any) => {
     console.log(errors); // a map of field names and their first error message
     console.log(results); // a detailed map of field names and their validation results
 };
-
 </script>
 
 <style scoped></style>
 
 <template>
-    <div>
+    <main>
         <div class="absolute left-0 right-0 top-24 m-auto">
             <Vue3Lottie animationLink="https://lottie.host/8fa54461-7cdf-45aa-b14e-7819b857f4d9/LvOgY41nLc.json"
                 :height="600" :width="400" />
@@ -53,7 +51,6 @@ const onInvalidSubmit = ({ values, errors, results }: any) => {
 
                     <div class="mt-7 sm:mt-12 mx-auto max-w-xl relative">
                         <!-- Form -->
-
                         <Form v-slot="{ errors }" :validation-schema="username" @submit="onSubmit"
                             @invalid-submit="onInvalidSubmit" class="space-y-4 md:space-y-6" action="#">
                             <div
@@ -119,5 +116,5 @@ const onInvalidSubmit = ({ values, errors, results }: any) => {
             </div>
         </div>
         <!-- End Hero -->
-    </div>
+    </main>
 </template>
