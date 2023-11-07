@@ -14,6 +14,7 @@
         <HomeSchedule />
         <HomeTestimonials />
         <HomeCoaches />
+        <HomePlatforms />
         <HomePDF />
     </div>
 </template>
