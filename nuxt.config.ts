@@ -37,7 +37,7 @@ export default defineNuxtConfig({
 
     app: {
         head: {
-            title: "Debug Lab: Student Centre",
+            title: "Debug Lab Skills Learning Center",
             charset: "utf-8",
             viewport: "width=device-width, initial-scale=1",
             meta: [
@@ -55,7 +55,7 @@ export default defineNuxtConfig({
                 {
                     hid: "title",
                     name: "title",
-                    content: `Debug Lab: Student Centre`,
+                    content: `Debug Lab Skills Learning Center`,
                 },
                 {
                     // hid: 'author',
@@ -75,7 +75,7 @@ export default defineNuxtConfig({
                 {
                     hid: "og:title",
                     property: "og:title",
-                    content: `Debug Lab: Student Centre`,
+                    content: `Debug Lab Skills Learning Center`,
                 },
                 {
                     hid: "og:description",
@@ -106,7 +106,7 @@ export default defineNuxtConfig({
                 {
                     hid: "twitter:title",
                     property: "twitter:title",
-                    content: `Debug Lab: Student Centre`,
+                    content: `Debug Lab Skills Learning Center`,
                 },
                 {
                     hid: "twitter:description",
@@ -170,7 +170,7 @@ export default defineNuxtConfig({
         redirectOptions: {
             login: "/login",
             callback: "/",
-            exclude: ["/", "/register", "/credentials"],
+            exclude: ["/", "/register", "/credentials", "/search-credentials"],
         },
     },
 
