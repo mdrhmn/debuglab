@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const colors = require("tailwindcss/colors");
 
 export default <Partial<Config>>{
     content: [
@@ -10,10 +11,20 @@ export default <Partial<Config>>{
         "./app.vue",
         "node_modules/flowbite/**/*.{js,jsx,ts,tsx}",
         "node_modules/preline/dist/*.js",
+        "node_modules/vue-tailwind-datepicker/**/*.js",
     ],
     darkMode: "class",
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                "vtd-primary": colors.sky, // Light mode Datepicker color
+                "vtd-secondary": colors.gray, // Dark mode Datepicker color
+            },
+        },
     },
-    plugins: [require("preline/plugin")],
+    plugins: [
+        require("@tailwindcss/forms"),
+        require("flowbite/plugin"),
+        require("preline/plugin"),
+    ],
 };
