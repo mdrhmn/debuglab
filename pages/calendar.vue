@@ -53,6 +53,7 @@ const calendarOptions = {
     selectMirror: true,
     weekNumbers: true,
     businessHours: true,
+    eventColor: "#f97316",
     firstDay: 1,
     buttonText: {
         today: 'Today',
