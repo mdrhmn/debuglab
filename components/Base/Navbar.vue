@@ -67,14 +67,14 @@
                         class="font-medium hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
                         aria-current="page">
                         Home</NuxtLink>
-                    <NuxtLink to="logbook" activeClass="text-orange-500 dark:text-white"
-                        class="font-medium hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
-                        aria-current="page">
-                        Logbook</NuxtLink>
                     <NuxtLink to="search-credentials" activeClass="text-orange-500 dark:text-white"
                         class="font-medium hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
                         aria-current="page">
                         Students</NuxtLink>
+                    <NuxtLink to="logbook" activeClass="text-orange-500 dark:text-white"
+                        class="font-medium hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
+                        aria-current="page">
+                        Logbook</NuxtLink>
                     <NuxtLink to="calendar" activeClass="text-orange-500 dark:text-white"
                         class="font-medium hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
                         aria-current="page">
