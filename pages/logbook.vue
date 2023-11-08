@@ -85,6 +85,16 @@
                         <img src="https://i.pinimg.com/originals/94/fd/2b/94fd2bf50097ade743220761f41693d5.gif"
                             style="width: 100px; height: 80px;" />
                     </template>
+                    <template #item-progress.title="item">
+                        <span v-if="item.progress.skill === 'Cadet'"
+                            class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-teal-100 text-teal-800 dark:bg-teal-800/30 dark:text-teal-500">{{ item.progress.title }}</span>
+                        <span v-else-if="item.progress.skill === '3D Design'"
+                            class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-800/30 dark:text-blue-500">{{ item.progress.title }}</span>
+                        <span v-else-if="item.progress.skill === 'Coding'"
+                            class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">{{ item.progress.title }}</span>
+                        <span v-else-if="item.progress.skill === 'Game & Animation'"
+                            class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-800/30 dark:text-yellow-500">{{ item.progress.title }}</span>
+                    </template>
                     <template #item-action="item">
                         <div class="px-6 py-1.5 flex justify-end">
                             <div
@@ -685,7 +695,8 @@ const onCreateSubmit = async (values: any) => {
             full_name
             ),
             progress (
-            title
+            title, 
+            skill
             ),
             comment,
             class_date
@@ -749,7 +760,8 @@ const onEditSubmit = async (values: any) => {
             full_name
             ),
             progress (
-            title
+            title, 
+            skill
             ),
             comment,
             class_date
@@ -806,7 +818,8 @@ const onDeleteSubmit = async (values: any) => {
             full_name
             ),
             progress (
-            title
+            title, 
+            skill
             ),
             comment,
             class_date
@@ -851,7 +864,8 @@ const { data: data, error: error } = await client
       full_name
     ),
     progress (
-      title
+      title,
+      skill
     ),
     comment,
     class_date
