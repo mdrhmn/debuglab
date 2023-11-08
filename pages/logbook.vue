@@ -85,15 +85,38 @@
                         <img src="https://i.pinimg.com/originals/94/fd/2b/94fd2bf50097ade743220761f41693d5.gif"
                             style="width: 100px; height: 80px;" />
                     </template>
+                    <template #empty-message>
+                        <div
+                            class="min-h-[15rem] flex flex-col bg-white border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+                            <div class="flex flex-auto flex-col justify-center items-center p-4 md:p-5">
+                                <svg class="w-10 h-10 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" x2="2" y1="12" y2="12" />
+                                    <path
+                                        d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
+                                    <line x1="6" x2="6.01" y1="16" y2="16" />
+                                    <line x1="10" x2="10.01" y1="16" y2="16" />
+                                </svg>
+                                <p class="mt-5 text-sm text-gray-800 dark:text-gray-300">
+                                    No data to show
+                                </p>
+                            </div>
+                        </div>
+                    </template>
                     <template #item-progress.title="item">
                         <span v-if="item.progress.skill === 'Cadet'"
-                            class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-teal-100 text-teal-800 dark:bg-teal-800/30 dark:text-teal-500">{{ item.progress.title }}</span>
+                            class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-teal-100 text-teal-800 dark:bg-teal-800/30 dark:text-teal-500">{{
+                                item.progress.title }}</span>
                         <span v-else-if="item.progress.skill === '3D Design'"
-                            class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-800/30 dark:text-blue-500">{{ item.progress.title }}</span>
+                            class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-800/30 dark:text-blue-500">{{
+                                item.progress.title }}</span>
                         <span v-else-if="item.progress.skill === 'Coding'"
-                            class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">{{ item.progress.title }}</span>
+                            class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">{{
+                                item.progress.title }}</span>
                         <span v-else-if="item.progress.skill === 'Game & Animation'"
-                            class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-800/30 dark:text-yellow-500">{{ item.progress.title }}</span>
+                            class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-800/30 dark:text-yellow-500">{{
+                                item.progress.title }}</span>
                     </template>
                     <template #item-action="item">
                         <div class="px-6 py-1.5 flex justify-end">
@@ -918,5 +941,4 @@ ul {
 
 .logbook-table {
     --easy-table-body-even-row-background-color: #f3f4f6;
-}
-</style>
+}</style>
