@@ -19,7 +19,7 @@
             </div>
 
             <div class="p-4 md:p-7 bg-gray-100 rounded-lg dark:bg-slate-800">
-                <img class="py-3 lg:py-8 w-28 h-auto md:w-32 lg:w-36 mx-auto"
+                <img class="py-4 lg:py-8 w-28 h-auto md:w-32 lg:w-36 mx-auto"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Khan_Academy_logo_%282018%29.svg/2560px-Khan_Academy_logo_%282018%29.svg.png">
             </div>
 
@@ -29,7 +29,7 @@
             </div>
 
             <div class="p-4 md:p-7 bg-gray-100 rounded-lg dark:bg-slate-800">
-                <img class="py-3 lg:py-8 w-28 h-auto md:w-32 lg:w-36 mx-auto"
+                <img class="py-6 lg:py-8 w-28 h-auto md:w-32 lg:w-36 mx-auto"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/FreeCodeCamp_logo.svg/2560px-FreeCodeCamp_logo.svg.png">
             </div>
 
