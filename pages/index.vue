@@ -6,6 +6,7 @@
         <HomeTestimonials />
         <HomeCoaches />
         <HomePlatforms />
+        <HomeGallery />
         <HomePDF />
         <BaseScrollToTop />
     </div>
