@@ -6,3 +6,8 @@ td,
 th {
     box-shadow: none !important;
 }
+
+.fc-h-event {
+    background-color: #f97316 !important;
+    border: none !important;
+}
