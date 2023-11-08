@@ -16,7 +16,7 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Card -->
                 <div class="flex h-auto">
-                    <div class="flex flex-col bg-white rounded-xl dark:bg-slate-800">
+                    <div class="flex flex-col bg-white rounded-xl shadow-lg dark:bg-slate-800">
                         <div class="flex-auto p-4 md:p-6">
                             <p class="text-base italic md:text-lg text-gray-800 dark:text-gray-200">
                                 "I like to study at Debug Lab! I learn how to code here. After going through all the
@@ -49,7 +49,7 @@
 
                 <!-- Card -->
                 <div class="flex h-auto">
-                    <div class="flex flex-col bg-white rounded-xl dark:bg-slate-800">
+                    <div class="flex flex-col bg-white rounded-xl shadow-lg dark:bg-slate-800">
                         <div class="flex-auto p-4 md:p-6">
                             <p class="text-base italic md:text-lg text-gray-800 dark:text-gray-200">
                                 "I really enjoyed studying at Debug Lab! In the past few years, <strong>
@@ -86,7 +86,7 @@
 
                 <!-- Card -->
                 <div class="flex h-auto">
-                    <div class="flex flex-col bg-white rounded-xl dark:bg-slate-800">
+                    <div class="flex flex-col bg-white rounded-xl shadow-lg dark:bg-slate-800">
                         <div class="flex-auto p-4 md:p-6">
                             <p class="text-base italic md:text-lg text-gray-800 dark:text-gray-200">
                                 "<strong>Am I learning someting cool here? Definitely, yes!</strong> In the very
