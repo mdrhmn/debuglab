@@ -90,10 +90,9 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 
 ## Features
 
-1. Authentication (Log In, Log Out & Register)
-2. Home Page
-3. Search Student Credentials
-4. View Student Credentials & Progress
-5. View Student Birthdays in Calendar
-6. Manage Student Logbook
-
+1. **Authentication (Log In, Log Out & Register)**
+2. **Home Page**
+3. **Search Student Credentials**
+4. **View Student Credentials & Progress**
+5. **View Student Birthdays in Calendar**
+6. **Manage Student Logbook**
