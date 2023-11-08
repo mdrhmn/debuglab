@@ -6,7 +6,9 @@
         <div class="mx-auto max-w-screen-xl">
             <div class="sm:flex sm:items-center sm:justify-between">
                 <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {{ new Date().getFullYear() }}
-                    <NuxtLink to="/" class="hover:underline">Debug Lab</NuxtLink>. All Rights Reserved.
+                    <NuxtLink to="/" class="hover:underline">Debug Lab</NuxtLink>. All Rights Reserved. Made with 💙
+                    by <a target="_blank" href="https://www.linkedin.com/in/muhd-rahiman/"
+                        class="font-medium hover:text-orange-400 dark:text-gray-400 dark:hover:text-gray-500">Ray</a>.
                 </span>
 
                 <div class="mt-2 flex justify-between items-center">
