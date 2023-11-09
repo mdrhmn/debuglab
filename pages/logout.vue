@@ -16,6 +16,7 @@ onMounted(async () => {
 
     // Reset store
     authStore.$reset();
+    authStore.session = null;
 
     // Push notification
     notify({

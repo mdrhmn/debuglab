@@ -9,8 +9,7 @@
                 </NuxtLink>
 
                 <BaseDarkModeToggle />
-
-                <Menu v-if="session && Object.keys(session).length !== 0 && session.constructor === Object" as="div"
+                <Menu v-if="session" as="div"
                     class="md:hidden lg:hidden relative inline-block text-left">
                     <div>
                         <MenuButton

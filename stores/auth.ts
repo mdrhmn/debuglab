@@ -3,7 +3,7 @@ export const useAuthStore = defineStore("useAuthStore", {
         return {
             // All these properties will have their type inferred automatically
             isLoggedIn: <boolean>false,
-            session: <object>{},
+            session: null,
         };
     },
 
