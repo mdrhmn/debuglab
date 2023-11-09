@@ -50,7 +50,7 @@ export default defineNuxtConfig({
                     hid: "description",
                     name: "description",
                     content:
-                        "Debug Lab is a skill learning center for children aged 7-17 to come together to learn, train and master their skills in technology for better future.",
+                        "Debug Lab is a skill learning center for children aged 7-17 to come together to learn, train and master their skills in technology for a better future.",
                 },
                 {
                     hid: "title",
@@ -81,7 +81,7 @@ export default defineNuxtConfig({
                     hid: "og:description",
                     property: "og:description",
                     content:
-                        "Debug Lab is a skill learning center for children aged 7-17 to come together to learn, train and master their skills in technology for better future.",
+                        "Debug Lab is a skill learning center for children aged 7-17 to come together to learn, train and master their skills in technology for a better future.",
                 },
                 {
                     hid: "og:image",
@@ -112,7 +112,7 @@ export default defineNuxtConfig({
                     hid: "twitter:description",
                     property: "twitter:description",
                     content:
-                        "Debug Lab is a skill learning center for children aged 7-17 to come together to learn, train and master their skills in technology for better future.",
+                        "Debug Lab is a skill learning center for children aged 7-17 to come together to learn, train and master their skills in technology for a better future.",
                 },
             ],
             script: [
