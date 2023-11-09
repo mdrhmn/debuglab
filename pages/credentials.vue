@@ -40,7 +40,8 @@
                                     Currently, you are working on: <strong>{{ data[0].progress.title }}</strong>
                                 </p>
                                 <p class="mt-2 text-xs text-gray-500 dark:text-gray-500">
-                                    Last updated: {{ dayjs(data[0].updated_at).format("YYYY-MM-DD") }}
+                                    Last updated: <strong>{{ dayjs(data[0].updated_at).format("dddd, MMMM D, YYYY h:mm A")
+                                    }}</strong>
                                 </p>
                             </div>
                         </div>
