@@ -151,11 +151,11 @@ watchEffect(async () => {
                                 Loading...
                             </button>
 
-                            <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                            <!-- <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                                 Don't have an account yet? <NuxtLink to="register"
                                     class="font-medium text-orange-600 hover:underline dark:text-orange-500">Register
                                 </NuxtLink>
-                            </p>
+                            </p> -->
                         </form>
                     </div>
                 </div>
