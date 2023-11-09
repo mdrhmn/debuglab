@@ -99,6 +99,8 @@ const { data: data, error: error } = await client
     updated_at
   `)
     .eq('coder_id', coderData[0]?.id)
+    .order('class_date', { ascending: false })
+    .limit(1)
 
 console.log(data)
 
