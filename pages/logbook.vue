@@ -118,6 +118,11 @@
                             class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-800/30 dark:text-yellow-500">{{
                                 item.progress.title }}</span>
                     </template>
+                    <template #item-comment="item">
+                        <div style="white-space: pre-wrap;">
+                            {{ item.comment }}
+                        </div>
+                    </template>
                     <template #item-action="item">
                         <div class="px-6 py-1.5 flex justify-end">
                             <div
@@ -480,7 +485,7 @@
                                             <Field v-slot="{ field, errorMessage }" name="comment">
                                                 <textarea v-model="selectedItem.comment"
                                                     class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-orange-500 focus:ring-orange-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-                                                    rows="3" placeholder="Enter comment"></textarea>
+                                                    rows="6" placeholder="Enter comment"></textarea>
 
                                                 <p
                                                     class="flex items-center font-medium text-red-600 text-xs mt-1 ml-1 dark:text-red-500">
@@ -588,8 +593,8 @@ const authStore = useAuthStore();
 
 /* -------------------------------- Datatable ------------------------------- */
 
-const sortBy: string[] = ["class_date", "coders.full_name"];
-const sortType: SortType[] = ["desc", "asc"];
+const sortBy: string[] = ["class_date", "classes.time", "coders.full_name"];
+const sortType: SortType[] = ["desc", "desc", "asc"];
 
 const headers: Header[] = [
     { text: "DATE", value: "class_date", sortable: true, width: 100 },
@@ -712,7 +717,7 @@ const onCreateSubmit = async (values: any) => {
             .select(`
             id,
             classes (
-            title
+            title,
             ),
             coders (
             full_name
@@ -881,7 +886,8 @@ const { data: data, error: error } = await client
     .select(`
     id,
     classes (
-      title
+      title,
+      time
     ),
     coders (
       full_name
