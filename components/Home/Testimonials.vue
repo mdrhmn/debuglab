@@ -30,7 +30,7 @@
                             <div class="flex items-center">
                                 <div class="flex-shrink-0">
                                     <nuxt-img format="webp" class="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]"
-                                        src="~/assets/img/student-3.png" alt="Image Description">
+                                        src="~/assets/img/student-3.png" alt="Image Description" />
                                 </div>
 
                                 <div class="grow ms-3">
@@ -67,7 +67,7 @@
                             <div class="flex items-center">
                                 <div class="flex-shrink-0">
                                     <nuxt-img format="webp" class="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]"
-                                        src="~/assets/img/student-2.png" alt="Image Description">
+                                        src="~/assets/img/student-2.png" alt="Image Description" />
                                 </div>
 
                                 <div class="grow ms-3">
@@ -102,7 +102,7 @@
                             <div class="flex items-center">
                                 <div class="flex-shrink-0">
                                     <nuxt-img format="webp" class="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]"
-                                        src="~/assets/img/student-1.png" alt="Image Description">
+                                        src="~/assets/img/student-1.png" alt="Image Description" />
                                 </div>
 
                                 <div class="grow ms-3">

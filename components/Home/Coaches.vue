@@ -15,7 +15,7 @@
                 class="flex flex-col rounded-xl shadow-lg p-4 md:p-6 bg-white border border-gray-200 dark:bg-slate-900 dark:border-gray-700">
                 <div class="flex items-center gap-x-4">
                     <nuxt-img format="webp" class="rounded-full w-20 h-20" src="~/assets/img/irfan.jpeg"
-                        alt="Image Description">
+                        alt="Image Description" />
                         <div class="grow">
                             <h3 class="font-medium text-gray-800 dark:text-gray-200">
                                 Irfan Mazuki
@@ -39,7 +39,7 @@
                 class="flex flex-col rounded-xl shadow-lg p-4 md:p-6 bg-white border border-gray-200 dark:bg-slate-900 dark:border-gray-700">
                 <div class="flex items-center gap-x-4">
                     <nuxt-img format="webp" class="rounded-full w-20 h-20" src="~/assets/img/meijen.jpeg"
-                        alt="Image Description">
+                        alt="Image Description" />
                         <div class="grow">
                             <h3 class="font-medium text-gray-800 dark:text-gray-200">
                                 Liew Mei Jen
@@ -64,7 +64,7 @@
                 class="flex flex-col rounded-xl shadow-lg p-4 md:p-6 bg-white border border-gray-200 dark:bg-slate-900 dark:border-gray-700">
                 <div class="flex items-center gap-x-4">
                     <nuxt-img format="webp" class="rounded-full w-20 h-20" src="~/assets/img/kiefer.jpeg"
-                        alt="Image Description">
+                        alt="Image Description" />
                         <div class="grow">
                             <h3 class="font-medium text-gray-800 dark:text-gray-200">
                                 Kiefer Chen
