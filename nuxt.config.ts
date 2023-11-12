@@ -8,7 +8,9 @@ export default defineNuxtConfig({
 
         // UI
         "nuxt-headlessui",
+        "nuxt-headlessui",
         "@nuxtjs/color-mode",
+        "@nuxt/image",
 
         // State Management
         "@pinia/nuxt",
