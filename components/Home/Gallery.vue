@@ -16,7 +16,8 @@
                 <a
                     class="group relative block rounded-xl shadow-lg overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                     <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
-                        <img class="group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover"
+                        <nuxt-img format="webp"
+                            class="group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover"
                             src="~/assets/img/gallery_1_cropped.png" alt="Image Description">
                     </div>
                     <div class="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
@@ -35,7 +36,8 @@
                 <a
                     class="group relative block rounded-xl shadow-lg overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                     <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
-                        <img class="group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover"
+                        <nuxt-img format="webp"
+                            class="group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover"
                             src="~/assets/img/gallery_3.jpg" alt="Image Description">
                     </div>
                     <div class="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
@@ -54,7 +56,8 @@
                 <a
                     class="group relative block rounded-xl shadow-lg overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                     <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
-                        <img class="group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover"
+                        <nuxt-img format="webp"
+                            class="group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover"
                             src="~/assets/img/gallery_4.jpg" alt="Image Description">
                     </div>
                     <div class="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
@@ -73,7 +76,8 @@
                 <a
                     class="group relative block rounded-xl shadow-lg overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                     <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
-                        <img class="group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover"
+                        <nuxt-img format="webp"
+                            class="group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover"
                             src="~/assets/img/gallery_5.jpg" alt="Image Description">
                     </div>
                     <div class="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
@@ -92,7 +96,8 @@
                 <a
                     class="group relative block rounded-xl shadow-lg overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                     <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
-                        <img class="group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover"
+                        <nuxt-img format="webp"
+                            class="group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover"
                             src="~/assets/img/gallery_2.jpg" alt="Image Description">
                     </div>
                     <div class="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
