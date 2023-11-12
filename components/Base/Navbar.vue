@@ -5,7 +5,7 @@
         <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
             <div class="flex items-center justify-between">
                 <NuxtLink class="inline-flex items-center gap-x-2 text-xl w-full font-semibold dark:text-white" to="/">
-                    <nuxt-img format="webp" class="w-40 h-auto" src="~/assets/img/logo-horizontal.png" alt="Logo" />
+                    <img format="webp" class="w-40 h-auto" src="~/assets/img/logo-horizontal.png" alt="Logo" />
                 </NuxtLink>
 
                 <BaseDarkModeToggle />

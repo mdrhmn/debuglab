@@ -119,29 +119,25 @@
                         <!-- Tab Content -->
                         <div>
                             <div id="tabs-with-card-1" role="tabpanel" aria-labelledby="tabs-with-card-item-1">
-                                <nuxt-img format="webp"
-                                    class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
+                                <img format="webp" class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
                                     src="~/assets/img/coding.jpeg" alt="Image Description" />
                             </div>
 
                             <div id="tabs-with-card-2" class="hidden" role="tabpanel"
                                 aria-labelledby="tabs-with-card-item-2">
-                                <nuxt-img format="webp"
-                                    class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
+                                <img format="webp" class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
                                     src="~/assets/img/3d-animation.jpeg" alt="Image Description" />
                             </div>
 
                             <div id="tabs-with-card-3" class="hidden" role="tabpanel"
                                 aria-labelledby="tabs-with-card-item-3">
-                                <nuxt-img format="webp"
-                                    class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
+                                <img format="webp" class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
                                     src="~/assets/img/game-web-dev.jpeg" alt="Image Description" />
                             </div>
 
                             <div id="tabs-with-card-4" class="hidden" role="tabpanel"
                                 aria-labelledby="tabs-with-card-item-4">
-                                <nuxt-img format="webp"
-                                    class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
+                                <img format="webp" class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
                                     src="~/assets/img/3d-printing.jpeg" alt="Image Description" />
                             </div>
                         </div>

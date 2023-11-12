@@ -14,42 +14,42 @@
         <!-- Grid -->
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 lg:gap-6">
             <div class="p-4 md:p-7 bg-gray-100 rounded-lg dark:bg-slate-800 hover:shadow-lg transition">
-                <nuxt-img format="webp" class="py-3 lg:py-5 w-28 h-auto md:w-32 lg:w-36 mx-auto"
+                <img format="webp" class="py-3 lg:py-5 w-28 h-auto md:w-32 lg:w-36 mx-auto"
                     src="https://members-csforall.imgix.net/members/logos/codecombat-logo.png" />
             </div>
 
             <div class="p-4 md:p-7 bg-gray-100 rounded-lg dark:bg-slate-800 hover:shadow-lg transition">
-                <nuxt-img format="webp" class="py-4 lg:py-8 w-28 h-auto md:w-32 lg:w-36 mx-auto"
+                <img format="webp" class="py-4 lg:py-8 w-28 h-auto md:w-32 lg:w-36 mx-auto"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Khan_Academy_logo_%282018%29.svg/2560px-Khan_Academy_logo_%282018%29.svg.png" />
             </div>
 
             <div class="p-4 md:p-7 bg-gray-100 rounded-lg dark:bg-slate-800 hover:shadow-lg transition">
-                <nuxt-img format="webp" class="py-3 lg:py-5 w-28 h-auto md:w-32 lg:w-36 mx-auto"
+                <img format="webp" class="py-3 lg:py-5 w-28 h-auto md:w-32 lg:w-36 mx-auto"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Logo-tinkercad-wordmark.svg/1200px-Logo-tinkercad-wordmark.svg.png" />
             </div>
 
             <div class="p-4 md:p-7 bg-gray-100 rounded-lg dark:bg-slate-800 hover:shadow-lg transition">
-                <nuxt-img format="webp" class="py-6 lg:py-8 w-28 h-auto md:w-32 lg:w-36 mx-auto"
+                <img format="webp" class="py-6 lg:py-8 w-28 h-auto md:w-32 lg:w-36 mx-auto"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/FreeCodeCamp_logo.svg/2560px-FreeCodeCamp_logo.svg.png" />
             </div>
 
             <div class="p-4 md:p-7 bg-gray-100 rounded-lg dark:bg-slate-800 hover:shadow-lg transition">
-                <nuxt-img format="webp" class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto"
+                <img format="webp" class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Scratchlogo.svg/1280px-Scratchlogo.svg.png" />
             </div>
 
             <div class="p-4 md:p-7 bg-gray-100 rounded-lg dark:bg-slate-800 hover:shadow-lg transition">
-                <nuxt-img format="webp" class="py-3 lg:py-5 w-8 h-auto md:w-12 lg:w-12 mx-auto"
+                <img format="webp" class="py-3 lg:py-5 w-8 h-auto md:w-12 lg:w-12 mx-auto"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Code.org_logo.svg/1200px-Code.org_logo.svg.png" />
             </div>
 
             <div class="p-4 md:p-7 bg-gray-100 rounded-lg dark:bg-slate-800 hover:shadow-lg transition">
-                <nuxt-img format="webp" class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto"
+                <img format="webp" class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Udemy_logo.svg/2560px-Udemy_logo.svg.png" />
             </div>
 
             <div class="p-4 md:p-7 bg-gray-100 rounded-lg dark:bg-slate-800 hover:shadow-lg transition">
-                <nuxt-img format="webp" class="py-3 lg:py-5 w-28 h-auto md:w-32 lg:w-36 mx-auto"
+                <img format="webp" class="py-3 lg:py-5 w-28 h-auto md:w-32 lg:w-36 mx-auto"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Logo_Blender.svg/1200px-Logo_Blender.svg.png" />
             </div>
         </div>

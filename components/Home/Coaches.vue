@@ -14,19 +14,19 @@
             <div
                 class="flex flex-col rounded-xl shadow-lg p-4 md:p-6 bg-white border border-gray-200 dark:bg-slate-900 dark:border-gray-700">
                 <div class="flex items-center gap-x-4">
-                    <nuxt-img format="webp" class="rounded-full w-20 h-20" src="~/assets/img/irfan.jpeg"
+                    <img format="webp" class="rounded-full w-20 h-20" src="~/assets/img/irfan.jpeg"
                         alt="Image Description" />
-                        <div class="grow">
-                            <h3 class="font-medium text-gray-800 dark:text-gray-200">
-                                Irfan Mazuki
-                            </h3>
-                            <p class="text-xs text-gray-500">
-                                Front-end & Back-end Teacher
-                            </p>
-                            <p class="text-xs text-gray-500">
-                                Working as Software Engineer in MNC Company
-                            </p>
-                        </div>
+                    <div class="grow">
+                        <h3 class="font-medium text-gray-800 dark:text-gray-200">
+                            Irfan Mazuki
+                        </h3>
+                        <p class="text-xs text-gray-500">
+                            Front-end & Back-end Teacher
+                        </p>
+                        <p class="text-xs text-gray-500">
+                            Working as Software Engineer in MNC Company
+                        </p>
+                    </div>
                 </div>
 
                 <p class="mt-3 text-gray-500">
@@ -38,19 +38,19 @@
             <div
                 class="flex flex-col rounded-xl shadow-lg p-4 md:p-6 bg-white border border-gray-200 dark:bg-slate-900 dark:border-gray-700">
                 <div class="flex items-center gap-x-4">
-                    <nuxt-img format="webp" class="rounded-full w-20 h-20" src="~/assets/img/meijen.jpeg"
+                    <img format="webp" class="rounded-full w-20 h-20" src="~/assets/img/meijen.jpeg"
                         alt="Image Description" />
-                        <div class="grow">
-                            <h3 class="font-medium text-gray-800 dark:text-gray-200">
-                                Liew Mei Jen
-                            </h3>
-                            <p class="text-xs text-gray-500">
-                                Coding Teacher
-                            </p>
-                            <p class="text-xs text-gray-500">
-                                6 years experience in industry
-                            </p>
-                        </div>
+                    <div class="grow">
+                        <h3 class="font-medium text-gray-800 dark:text-gray-200">
+                            Liew Mei Jen
+                        </h3>
+                        <p class="text-xs text-gray-500">
+                            Coding Teacher
+                        </p>
+                        <p class="text-xs text-gray-500">
+                            6 years experience in industry
+                        </p>
+                    </div>
                 </div>
 
                 <p class="mt-3 text-gray-500">
@@ -63,19 +63,19 @@
             <div
                 class="flex flex-col rounded-xl shadow-lg p-4 md:p-6 bg-white border border-gray-200 dark:bg-slate-900 dark:border-gray-700">
                 <div class="flex items-center gap-x-4">
-                    <nuxt-img format="webp" class="rounded-full w-20 h-20" src="~/assets/img/kiefer.jpeg"
+                    <img format="webp" class="rounded-full w-20 h-20" src="~/assets/img/kiefer.jpeg"
                         alt="Image Description" />
-                        <div class="grow">
-                            <h3 class="font-medium text-gray-800 dark:text-gray-200">
-                                Kiefer Chen
-                            </h3>
-                            <p class="text-xs text-gray-500">
-                                Coding & 3D Modelling Teacher
-                            </p>
-                            <p class="text-xs text-gray-500">
-                                42KL Programming School Graduate
-                            </p>
-                        </div>
+                    <div class="grow">
+                        <h3 class="font-medium text-gray-800 dark:text-gray-200">
+                            Kiefer Chen
+                        </h3>
+                        <p class="text-xs text-gray-500">
+                            Coding & 3D Modelling Teacher
+                        </p>
+                        <p class="text-xs text-gray-500">
+                            42KL Programming School Graduate
+                        </p>
+                    </div>
                 </div>
 
                 <p class="mt-3 text-gray-500">
