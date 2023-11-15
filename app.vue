@@ -3,12 +3,14 @@
     <NuxtLayout>
       <BasePushNotification />
       <NuxtLoadingIndicator />
-      <NuxtPage />
+      <NuxtPage v-bind:style="{ cursor: selectedCursor }"/>
     </NuxtLayout>
   </div>
 </template>
 
 <script setup lang="ts">
+import 'lazysizes';
+
 const client = useSupabaseClient();
 const authStore = useAuthStore();
 
@@ -20,6 +22,8 @@ if (!session && authStore.isLoggedIn) {
   const { session, user } = data
   authStore.$patch({ session: session });
 }
+
+const selectedCursor = `url(""), pointer`;
 </script>
 
 <style>

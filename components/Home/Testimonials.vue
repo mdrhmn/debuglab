@@ -29,7 +29,7 @@
                         <div class="p-4 bg-gray-200 rounded-b-xl md:px-7 dark:bg-slate-700">
                             <div class="flex items-center">
                                 <div class="flex-shrink-0">
-                                    <img format="webp" class="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]"
+                                    <img format="webp" data-sizes="auto" class="lazyload h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]"
                                         src="~/assets/img/student-3.png" alt="Image Description" />
                                 </div>
 
@@ -66,7 +66,7 @@
                         <div class="p-4 bg-gray-200 rounded-b-xl md:px-7 dark:bg-slate-700">
                             <div class="flex items-center">
                                 <div class="flex-shrink-0">
-                                    <img format="webp" class="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]"
+                                    <img format="webp" data-sizes="auto" class="lazyload h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]"
                                         src="~/assets/img/student-2.png" alt="Image Description" />
                                 </div>
 
@@ -101,7 +101,7 @@
                         <div class="p-4 bg-gray-200 rounded-b-xl md:px-7 dark:bg-slate-700">
                             <div class="flex items-center">
                                 <div class="flex-shrink-0">
-                                    <img format="webp" class="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]"
+                                    <img format="webp" data-sizes="auto" class="lazyload h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]"
                                         src="~/assets/img/student-1.png" alt="Image Description" />
                                 </div>
 

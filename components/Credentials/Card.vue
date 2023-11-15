@@ -1,7 +1,7 @@
 <template>
     <div
         class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
-        <img format="webp" class="object-cover h-64 flex flex-col justify-center items-center rounded-t-xl"
+        <img format="webp" data-sizes="auto" class="lazyload object-cover h-64 flex flex-col justify-center items-center rounded-t-xl"
             :src="platformData[0].logo_url" />
         <div class="p-4 md:p-6">
             <!-- <span class="block mb-1 text-xs font-semibold uppercase text-orange-600 dark:text-orange-500">
