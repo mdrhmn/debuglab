@@ -8,7 +8,6 @@
         <HomePlatforms />
         <HomeGallery />
         <HomePDF />
-        <BaseScrollToTop />
     </div>
 </template>
 

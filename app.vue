@@ -3,7 +3,8 @@
     <NuxtLayout>
       <BasePushNotification />
       <NuxtLoadingIndicator />
-      <NuxtPage v-bind:style="{ cursor: selectedCursor }"/>
+      <NuxtPage v-bind:style="{ cursor: selectedCursor }" />
+      <BaseScrollToTop />
     </NuxtLayout>
   </div>
 </template>
