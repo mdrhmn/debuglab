@@ -37,7 +37,20 @@
                                     Progress Check
                                 </h3>
                                 <p class="text-sm text-gray-500">
-                                    Currently, you are working on: <strong>{{ data[0].progress.title }}</strong>
+                                    Currently, you are working on:
+
+                                    <span v-if="data[0].progress.skill === 'Cadet'"
+                                        class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-teal-100 text-teal-800 dark:bg-teal-800/30 dark:text-teal-500">{{
+                                            data[0].progress.title }}</span>
+                                    <span v-else-if="data[0].progress.skill === '3D Design'"
+                                        class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-800/30 dark:text-blue-500">{{
+                                            data[0].progress.title }}</span>
+                                    <span v-else-if="data[0].progress.skill === 'Coding'"
+                                        class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">{{
+                                            data[0].progress.title }}</span>
+                                    <span v-else-if="data[0].progress.skill === 'Game & Animation'"
+                                        class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-800/30 dark:text-yellow-500">{{
+                                            data[0].progress.title }}</span>
                                 </p>
                                 <p class="mt-2 text-xs text-gray-500 dark:text-gray-500">
                                     Last updated: <strong>{{ dayjs(data[0].updated_at).format("dddd, MMMM D, YYYY h:mm A")
