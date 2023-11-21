@@ -14,8 +14,8 @@
             <div
                 class="flex flex-col rounded-xl shadow-lg p-4 md:p-6 bg-white border border-gray-200 dark:bg-slate-900 dark:border-gray-700">
                 <div class="flex items-center gap-x-4">
-                    <img format="webp" data-sizes="auto" class="lazyload rounded-full w-20 h-20" src="~/assets/img/irfan.jpeg"
-                        alt="Image Description" />
+                    <img format="webp" data-sizes="auto" class="lazyload rounded-full w-20 h-20"
+                        src="~/assets/img/irfan.jpeg" alt="Image Description" />
                     <div class="grow">
                         <h3 class="font-medium text-gray-800 dark:text-gray-200">
                             Irfan Mazuki
@@ -30,7 +30,9 @@
                 </div>
 
                 <p class="mt-3 text-gray-500">
-                    "It's important to make sure the content and learning materials are aligned with the industry needs"
+                    "<span class="italic">It's important to make sure the <strong>content</strong> and <strong>learning
+                            materials</strong> are <strong>aligned</strong> with
+                        the <strong>industry needs</strong>.</span>"
                 </p>
             </div>
             <!-- End Col -->
@@ -54,7 +56,8 @@
                 </div>
 
                 <p class="mt-3 text-gray-500">
-                    "Programming is not about writing code; it's about thinking"
+                    "<span class="italic"><strong>Programming</strong> is not about writing code; it's about
+                        <strong>thinking</strong>.</span>"
                 </p>
 
             </div>
@@ -63,8 +66,8 @@
             <div
                 class="flex flex-col rounded-xl shadow-lg p-4 md:p-6 bg-white border border-gray-200 dark:bg-slate-900 dark:border-gray-700">
                 <div class="flex items-center gap-x-4">
-                    <img format="webp" data-sizes="auto" class="lazyload rounded-full w-20 h-20" src="~/assets/img/kiefer.jpeg"
-                        alt="Image Description" />
+                    <img format="webp" data-sizes="auto" class="lazyload rounded-full w-20 h-20"
+                        src="~/assets/img/kiefer.jpeg" alt="Image Description" />
                     <div class="grow">
                         <h3 class="font-medium text-gray-800 dark:text-gray-200">
                             Kiefer Chen
@@ -79,7 +82,8 @@
                 </div>
 
                 <p class="mt-3 text-gray-500">
-                    "If you're not making mistakes, you're not trying hard enough"
+                    "<span class="italic">If you're not <strong>making mistakes</strong>, you're <strong>not trying hard
+                            enough</strong>.</span>"
                 </p>
 
             </div>
