@@ -121,7 +121,7 @@
                     </template>
                     <template #item-comment="item">
                         <div style="white-space: pre-wrap;">
-                            {{ item.comment }}
+                            <div v-html="item.comment" />
                         </div>
                     </template>
                     <template #item-action="item">
@@ -392,9 +392,143 @@
                                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Comment</label>
 
                                             <Field v-slot="{ field, errorMessage }" name="comment">
-                                                <textarea v-bind="field"
+                                                <!-- <textarea v-bind="field"
                                                     class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-orange-500 focus:ring-orange-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-                                                    rows="3" placeholder="Enter comment"></textarea>
+                                                    rows="3" placeholder="Enter comment"></textarea> -->
+
+                                                <BubbleMenu
+                                                    class="bg-white dark:bg-gray-700 rounded-xl border border-gray-200"
+                                                    :editor="createCommentEditor" :tippy-options="{ duration: 100 }"
+                                                    v-if="createCommentEditor">
+                                                    <div class="flex align-middle gap-x-0.5 p-2">
+                                                        <button
+                                                            @click.prevent="createCommentEditor?.chain().focus().toggleBold().run()"
+                                                            :class="{ 'bg-gray-100': createCommentEditor.isActive('bold') }"
+                                                            class="ql-bold w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                                                            <svg class="flex-shrink-0 w-4 h-4"
+                                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <path d="M14 12a4 4 0 0 0 0-8H6v8" />
+                                                                <path d="M15 20a4 4 0 0 0 0-8H6v8Z" />
+                                                            </svg>
+                                                        </button>
+                                                        <button
+                                                            @click.prevent="createCommentEditor?.chain().focus().toggleItalic().run()"
+                                                            :class="{ 'bg-gray-100': createCommentEditor.isActive('italic') }"
+                                                            class="ql-italic w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                                            type="button">
+                                                            <svg class="flex-shrink-0 w-4 h-4"
+                                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <line x1="19" x2="10" y1="4" y2="4" />
+                                                                <line x1="14" x2="5" y1="20" y2="20" />
+                                                                <line x1="15" x2="9" y1="4" y2="20" />
+                                                            </svg>
+                                                        </button>
+                                                        <button
+                                                            @click.prevent="createCommentEditor?.chain().focus().toggleUnderline().run()"
+                                                            :class="{ 'bg-gray-100': createCommentEditor.isActive('italic') }"
+                                                            class="ql-underline w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                                            type="button">
+                                                            <svg class="flex-shrink-0 w-4 h-4"
+                                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <path d="M6 4v6a6 6 0 0 0 12 0V4" />
+                                                                <line x1="4" x2="20" y1="20" y2="20" />
+                                                            </svg>
+                                                        </button>
+                                                        <button
+                                                            @click.prevent="createCommentEditor?.chain().focus().toggleStrike().run()"
+                                                            :class="{ 'bg-gray-100': createCommentEditor.isActive('strike') }"
+                                                            class="ql-strike w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                                            type="button">
+                                                            <svg class="flex-shrink-0 w-4 h-4"
+                                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <path d="M16 4H9a3 3 0 0 0-2.83 4" />
+                                                                <path d="M14 12a4 4 0 0 1 0 8H6" />
+                                                                <line x1="4" x2="20" y1="12" y2="12" />
+                                                            </svg>
+                                                        </button>
+                                                        <button
+                                                            @click.prevent="createCommentEditor?.chain().focus().toggleOrderedList().run()"
+                                                            :class="{ 'bg-gray-100': createCommentEditor.isActive('orderedList') }"
+                                                            class="ql-list w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                                            value="ordered" type="button">
+                                                            <svg class="flex-shrink-0 w-4 h-4"
+                                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <line x1="10" x2="21" y1="6" y2="6" />
+                                                                <line x1="10" x2="21" y1="12" y2="12" />
+                                                                <line x1="10" x2="21" y1="18" y2="18" />
+                                                                <path d="M4 6h1v4" />
+                                                                <path d="M4 10h2" />
+                                                                <path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1" />
+                                                            </svg>
+                                                        </button>
+                                                        <button
+                                                            @click.prevent="createCommentEditor?.chain().focus().toggleBulletList().run()"
+                                                            :class="{ 'bg-gray-100': createCommentEditor.isActive('bulletList') }"
+                                                            class="ql-list w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                                            value="bullet" type="button">
+                                                            <svg class="flex-shrink-0 w-4 h-4"
+                                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <line x1="8" x2="21" y1="6" y2="6" />
+                                                                <line x1="8" x2="21" y1="12" y2="12" />
+                                                                <line x1="8" x2="21" y1="18" y2="18" />
+                                                                <line x1="3" x2="3.01" y1="6" y2="6" />
+                                                                <line x1="3" x2="3.01" y1="12" y2="12" />
+                                                                <line x1="3" x2="3.01" y1="18" y2="18" />
+                                                            </svg>
+                                                        </button>
+                                                        <button
+                                                            @click.prevent="createCommentEditor?.chain().focus().toggleBlockquote().run()"
+                                                            :class="{ 'bg-gray-100': createCommentEditor.isActive('blockquote') }"
+                                                            class="ql-blockquote w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                                            type="button">
+                                                            <svg class="flex-shrink-0 w-4 h-4"
+                                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <path d="M17 6H3" />
+                                                                <path d="M21 12H8" />
+                                                                <path d="M21 18H8" />
+                                                                <path d="M3 12v6" />
+                                                            </svg>
+                                                        </button>
+                                                        <button
+                                                            @click.prevent="createCommentEditor?.chain().focus().toggleCode().run()"
+                                                            :class="{ 'bg-gray-100': createCommentEditor.isActive('code') }"
+                                                            class="ql-code w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                                            type="button">
+                                                            <svg class="flex-shrink-0 w-4 h-4"
+                                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <path d="m18 16 4-4-4-4" />
+                                                                <path d="m6 8-4 4 4 4" />
+                                                                <path d="m14.5 4-5 16" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </BubbleMenu>
+
+                                                <EditorContent :editor="createCommentEditor" />
 
                                                 <p
                                                     class="flex items-center font-medium text-red-600 text-xs mt-1 ml-1 dark:text-red-500">
@@ -484,9 +618,139 @@
                                                 class="mt-6 block mb-2 text-sm font-medium text-gray-900 dark:text-white">Comment</label>
 
                                             <Field v-slot="{ field, errorMessage }" name="comment">
-                                                <textarea v-model="selectedItem.comment"
-                                                    class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-orange-500 focus:ring-orange-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-                                                    rows="6" placeholder="Enter comment"></textarea>
+                                                <BubbleMenu
+                                                    class="bg-white dark:bg-gray-700 rounded-xl border border-gray-200"
+                                                    :editor="editCommentEditor" :tippy-options="{ duration: 100 }"
+                                                    v-if="editCommentEditor">
+                                                    <div class="flex align-middle gap-x-0.5 p-2">
+                                                        <button
+                                                            @click.prevent="editCommentEditor?.chain().focus().toggleBold().run()"
+                                                            :class="{ 'bg-gray-100': editCommentEditor.isActive('bold') }"
+                                                            class="ql-bold w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                                                            <svg class="flex-shrink-0 w-4 h-4"
+                                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <path d="M14 12a4 4 0 0 0 0-8H6v8" />
+                                                                <path d="M15 20a4 4 0 0 0 0-8H6v8Z" />
+                                                            </svg>
+                                                        </button>
+                                                        <button
+                                                            @click.prevent="editCommentEditor?.chain().focus().toggleItalic().run()"
+                                                            :class="{ 'bg-gray-100': editCommentEditor.isActive('italic') }"
+                                                            class="ql-italic w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                                            type="button">
+                                                            <svg class="flex-shrink-0 w-4 h-4"
+                                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <line x1="19" x2="10" y1="4" y2="4" />
+                                                                <line x1="14" x2="5" y1="20" y2="20" />
+                                                                <line x1="15" x2="9" y1="4" y2="20" />
+                                                            </svg>
+                                                        </button>
+                                                        <button
+                                                            @click.prevent="editCommentEditor?.chain().focus().toggleUnderline().run()"
+                                                            :class="{ 'bg-gray-100': editCommentEditor.isActive('italic') }"
+                                                            class="ql-underline w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                                            type="button">
+                                                            <svg class="flex-shrink-0 w-4 h-4"
+                                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <path d="M6 4v6a6 6 0 0 0 12 0V4" />
+                                                                <line x1="4" x2="20" y1="20" y2="20" />
+                                                            </svg>
+                                                        </button>
+                                                        <button
+                                                            @click.prevent="editCommentEditor?.chain().focus().toggleStrike().run()"
+                                                            :class="{ 'bg-gray-100': editCommentEditor.isActive('strike') }"
+                                                            class="ql-strike w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                                            type="button">
+                                                            <svg class="flex-shrink-0 w-4 h-4"
+                                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <path d="M16 4H9a3 3 0 0 0-2.83 4" />
+                                                                <path d="M14 12a4 4 0 0 1 0 8H6" />
+                                                                <line x1="4" x2="20" y1="12" y2="12" />
+                                                            </svg>
+                                                        </button>
+                                                        <button
+                                                            @click.prevent="editCommentEditor?.chain().focus().toggleOrderedList().run()"
+                                                            :class="{ 'bg-gray-100': editCommentEditor.isActive('orderedList') }"
+                                                            class="ql-list w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                                            value="ordered" type="button">
+                                                            <svg class="flex-shrink-0 w-4 h-4"
+                                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <line x1="10" x2="21" y1="6" y2="6" />
+                                                                <line x1="10" x2="21" y1="12" y2="12" />
+                                                                <line x1="10" x2="21" y1="18" y2="18" />
+                                                                <path d="M4 6h1v4" />
+                                                                <path d="M4 10h2" />
+                                                                <path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1" />
+                                                            </svg>
+                                                        </button>
+                                                        <button
+                                                            @click.prevent="editCommentEditor?.chain().focus().toggleBulletList().run()"
+                                                            :class="{ 'bg-gray-100': editCommentEditor.isActive('bulletList') }"
+                                                            class="ql-list w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                                            value="bullet" type="button">
+                                                            <svg class="flex-shrink-0 w-4 h-4"
+                                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <line x1="8" x2="21" y1="6" y2="6" />
+                                                                <line x1="8" x2="21" y1="12" y2="12" />
+                                                                <line x1="8" x2="21" y1="18" y2="18" />
+                                                                <line x1="3" x2="3.01" y1="6" y2="6" />
+                                                                <line x1="3" x2="3.01" y1="12" y2="12" />
+                                                                <line x1="3" x2="3.01" y1="18" y2="18" />
+                                                            </svg>
+                                                        </button>
+                                                        <button
+                                                            @click.prevent="editCommentEditor?.chain().focus().toggleBlockquote().run()"
+                                                            :class="{ 'bg-gray-100': editCommentEditor.isActive('blockquote') }"
+                                                            class="ql-blockquote w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                                            type="button">
+                                                            <svg class="flex-shrink-0 w-4 h-4"
+                                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <path d="M17 6H3" />
+                                                                <path d="M21 12H8" />
+                                                                <path d="M21 18H8" />
+                                                                <path d="M3 12v6" />
+                                                            </svg>
+                                                        </button>
+                                                        <button
+                                                            @click.prevent="editCommentEditor?.chain().focus().toggleCode().run()"
+                                                            :class="{ 'bg-gray-100': editCommentEditor.isActive('code') }"
+                                                            class="ql-code w-8 h-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                                            type="button">
+                                                            <svg class="flex-shrink-0 w-4 h-4"
+                                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round">
+                                                                <path d="m18 16 4-4-4-4" />
+                                                                <path d="m6 8-4 4 4 4" />
+                                                                <path d="m14.5 4-5 16" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </BubbleMenu>
+
+                                                <EditorContent :editor="editCommentEditor" />
 
                                                 <p
                                                     class="flex items-center font-medium text-red-600 text-xs mt-1 ml-1 dark:text-red-500">
@@ -582,6 +846,12 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
 import { lazy, array, number, object, string } from "yup";
 import { configure } from "vee-validate";
 
+import StarterKit from '@tiptap/starter-kit'
+import { useEditor, Editor, EditorContent, BubbleMenu, FloatingMenu } from '@tiptap/vue-3'
+import BulletList from "@tiptap/extension-bullet-list";
+import OrderedList from "@tiptap/extension-ordered-list";
+import Underline from "@tiptap/extension-underline"
+
 // Configure vee-validate triggers
 configure({
     validateOnBlur: false,
@@ -608,13 +878,73 @@ const headers: Header[] = [
 
 const searchField = ref("");
 const searchValue = ref("");
+const createComment = ref("");
 const selectedItem = ref();
+
+const editCommentEditor = useEditor({
+    content: '',
+    editorProps: {
+        attributes: {
+            class:
+                "prose prose-sm focus:outline-none"
+        }
+    },
+    extensions: [
+        StarterKit,
+        Underline,
+        BulletList.configure({
+            HTMLAttributes: {
+                class: 'list-disc list-inside'
+            },
+        }),
+        OrderedList.configure({
+            HTMLAttributes: {
+                class: 'list-decimal list-inside'
+            },
+        }),
+    ],
+
+    // triggered on every change
+    onUpdate: ({ editor }) => {
+        selectedItem.value.comment = editor.getHTML();
+    },
+});
+
+const createCommentEditor = useEditor({
+    content: '',
+    editorProps: {
+        attributes: {
+            class:
+                "prose prose-sm focus:outline-none"
+        }
+    },
+    extensions: [
+        StarterKit,
+        Underline,
+        BulletList.configure({
+            HTMLAttributes: {
+                class: 'list-disc list-inside'
+            },
+        }),
+        OrderedList.configure({
+            HTMLAttributes: {
+                class: 'list-decimal list-inside'
+            },
+        }),
+    ],
+    // triggered on every change
+    onUpdate: ({ editor }) => {
+        createComment.value = editor.getHTML();
+    },
+});
+
 
 /* --------------------------------- Modals --------------------------------- */
 
 const isOpenCreateModal = ref(false)
 const closeCreateModal = () => {
     isOpenCreateModal.value = false
+    createComment.value = "";
 }
 const openCreateModal = () => {
     isOpenCreateModal.value = true
@@ -627,6 +957,7 @@ const closeEditModal = () => {
 }
 const openEditModal = (item: any) => {
     selectedItem.value = item;
+    editCommentEditor?.value?.commands.setContent(selectedItem.value.comment)
     isOpenEditModal.value = true
 }
 
@@ -687,7 +1018,7 @@ const onCreateSubmit = async (values: any) => {
         class_id: formResult.class.id,
         progress_id: formResult.progress.id,
         class_date: dayjs(formResult.date[0]).format('YYYY-MM-DD'),
-        comment: formResult.comment,
+        comment: createComment.value,
         created_by: authStore.session.user.id,
     })
 
@@ -698,7 +1029,7 @@ const onCreateSubmit = async (values: any) => {
             class_id: formResult.class.id,
             progress_id: formResult.progress.id,
             class_date: dayjs(formResult.date[0]).format('YYYY-MM-DD'),
-            comment: formResult.comment,
+            comment: createComment.value,
             created_by: authStore.session.user.id,
         })
 

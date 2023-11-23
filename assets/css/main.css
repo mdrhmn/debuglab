@@ -6,3 +6,43 @@ td,
 th {
     box-shadow: none !important;
 }
+
+/* @layer base {
+  ul, ol {
+    list-style: revert;
+  }
+} */
+
+/* @layer base {
+    ul,
+    ol,
+    menu {
+        list-style: inside;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+} */
+
+
+/* Custom CSS Needed for TipTap PlaceHolder */
+
+/* Reference: https://stackoverflow.com/questions/71439281/change-enter-to-break-line-instead-of-new-paragraph-in-tiptap*/
+/* p:empty::before {
+    content: "";
+    display: inline-block;
+} */
+
+li > p {
+    display: inline;
+}
+
+/* Reference: https://github.com/ueberdosis/tiptap/issues/2659 */
+.ProseMirror p.is-editor-empty:first-child::before {
+    color: #adb5bd;
+    content: attr(data-placeholder);
+    float: left;
+    height: 0;
+    pointer-events: none;
+}
