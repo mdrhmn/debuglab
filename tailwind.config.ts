@@ -23,6 +23,7 @@ export default <Partial<Config>>{
         },
     },
     plugins: [
+        require("@tailwindcss/typography"),
         require("@tailwindcss/forms"),
         require("flowbite/plugin"),
         require("preline/plugin"),
