@@ -29,10 +29,10 @@ th {
 /* Custom CSS Needed for TipTap PlaceHolder */
 
 /* Reference: https://stackoverflow.com/questions/71439281/change-enter-to-break-line-instead-of-new-paragraph-in-tiptap*/
-/* p:empty::before {
+p:empty::before {
     content: "";
     display: inline-block;
-} */
+}
 
 li > p {
     display: inline;
