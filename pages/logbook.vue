@@ -120,9 +120,14 @@
                                 item.progress.title }}</span>
                     </template>
                     <template #item-comment="item">
-                        <div style="white-space: pre-wrap;">
-                            <div v-html="item.comment" />
-                        </div>
+                        <template v-if="item.comment !== null">
+                            <div style="white-space: pre-wrap;">
+                                <div v-html="item.comment" />
+                            </div>
+                        </template>
+                        <template v-else>
+                            —
+                        </template>
                     </template>
                     <template #item-action="item">
                         <div class="px-6 py-1.5 flex justify-end">
