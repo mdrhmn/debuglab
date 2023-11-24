@@ -37,7 +37,7 @@
                     <div class="hs-tooltip [--trigger:click]">
                         <button
                             @click="copyToClipboard(platformData[0].name.replace(/\s+/g, '-').toLowerCase() + '-username')"
-                            class="hs-tooltip-toggle text-white absolute right-2 bottom-2 bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
+                            class="hs-tooltip-toggle text-white absolute right-2 bottom-2 bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
                             <svg class="w-4 h-4 stroke-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <g fill="none" stroke="none">
                                     <path d="M7.75 7.757V6.75a3 3 0 0 1 3-3h6.5a3 3 0 0 1 3 3v6.5a3 3 0 0 1-3 3h-.992"
@@ -86,7 +86,7 @@
                     <div class="hs-tooltip [--trigger:click]">
                         <button
                             @click="copyToClipboard(platformData[0].name.replace(/\s+/g, '-').toLowerCase() + '-password')"
-                            class="hs-tooltip-toggle text-white absolute right-2 bottom-2 bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
+                            class="hs-tooltip-toggle text-white absolute right-2 bottom-2 bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
                             <svg class="w-4 h-4 stroke-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <g fill="none" stroke="none">
                                     <path d="M7.75 7.757V6.75a3 3 0 0 1 3-3h6.5a3 3 0 0 1 3 3v6.5a3 3 0 0 1-3 3h-.992"
