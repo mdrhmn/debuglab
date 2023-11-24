@@ -121,9 +121,14 @@
                     </template>
                     <template #item-comment="item">
                         <template v-if="item.comment !== null">
-                            <div style="white-space: pre-wrap;">
-                                <div v-html="item.comment" />
-                            </div>
+                            <template v-if="item.comment.trim().length === 0">
+                                —
+                            </template>
+                            <template v-else>
+                                <div style="white-space: pre-wrap;">
+                                    <div v-html="item.comment" />
+                                </div>
+                            </template>
                         </template>
                         <template v-else>
                             —
@@ -190,7 +195,8 @@
 
                                 <DialogPanel
                                     class="dark:bg-slate-900 w-full max-w-2xl transform rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                                    <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900 dark:text-white">
+                                    <DialogTitle as="h3"
+                                        class="text-lg font-medium leading-6 text-gray-900 dark:text-white">
                                         Log Student Progress
                                     </DialogTitle>
 
@@ -571,7 +577,8 @@
 
                                 <DialogPanel
                                     class="dark:bg-slate-900 w-full max-w-2xl transform rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                                    <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900 dark:text-white">
+                                    <DialogTitle as="h3"
+                                        class="text-lg font-medium leading-6 text-gray-900 dark:text-white">
                                         Edit Student Log Comment
                                     </DialogTitle>
 
