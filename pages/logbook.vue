@@ -983,6 +983,11 @@ const openDeleteModal = (item: any) => {
     isOpenDeleteModal.value = true
 }
 
+const formatter = ref({
+    date: 'DD MMM YYYY',
+    month: 'MMM',
+})
+
 /* --------------------------- Data initialization -------------------------- */
 
 const logbook = ref({
@@ -1013,10 +1018,84 @@ const logbookEdit = ref({
         .label("Comment")
 });
 
+/* --------------------------- Supabase API calls --------------------------- */
+
+// Initialise client
+const client = useSupabaseClient();
+
+const { data: classesData, error: classesError } = await client
+    .from('classes')
+    .select()
+const { data: namesData, error: namesError } = await client
+    .from('coders')
+    .select()
+const { data: progressData, error: progressError } = await client
+    .from('progress')
+    .select()
+
+const logbookData = ref();
+const { data: data, error: error } = await client
+    .from('logbook')
+    .select(`
+    id,
+    classes (
+      title,
+      time
+    ),
+    coders (
+      full_name
+    ),
+    progress (
+      title,
+      skill
+    ),
+    comment,
+    class_date
+  `)
+
+logbookData.value = data;
+
+let query = ref('')
+let selectedClass = ref({ title: "Select class" })
+let filteredClasses = computed(() =>
+    query.value === ''
+        ? classesData
+        : classesData.filter((x) =>
+            x.title
+                .toLowerCase()
+                .replace(/\s+/g, '')
+                .includes(query.value.toLowerCase().replace(/\s+/g, ''))
+        )
+)
+
+let selectedName = ref({ full_name: "Select name" })
+let filteredNames = computed(() =>
+    query.value === ''
+        ? namesData
+        : namesData.filter((x) =>
+            x.full_name
+                .toLowerCase()
+                .replace(/\s+/g, '')
+                .includes(query.value.toLowerCase().replace(/\s+/g, ''))
+        )
+)
+
+let selectedProgress = ref({ title: "Select progress" })
+let filteredProgress = computed(() =>
+    query.value === ''
+        ? progressData
+        : progressData.filter((x) =>
+            x.title
+                .toLowerCase()
+                .replace(/\s+/g, '')
+                .includes(query.value.toLowerCase().replace(/\s+/g, ''))
+        )
+)
+
 /* ------------------------ Form submission handling ------------------------ */
 
 // Handle successful create form submission
-const onCreateSubmit = async (values: any) => {
+const onCreateSubmit = async (values, { resetForm }) => {
     const formResult = values
 
     // Initialise client
@@ -1062,12 +1141,13 @@ const onCreateSubmit = async (values: any) => {
             id,
             classes (
             title,
+            time
             ),
             coders (
             full_name
             ),
             progress (
-            title, 
+            title,
             skill
             ),
             comment,
@@ -1075,6 +1155,14 @@ const onCreateSubmit = async (values: any) => {
         `)
 
         logbookData.value = data;
+
+        // Reset the form and the field values to their initial values
+        resetForm();
+
+        // Reset combobox placeholders
+        selectedClass.value = { title: "Select class" };
+        selectedName.value = { full_name: "Select name" };
+        selectedProgress.value = { title: "Select progress" };
     } else {
         // Push notification
         notify({
@@ -1208,80 +1296,6 @@ const onDeleteSubmit = async (values: any) => {
         }, 4000)
     }
 };
-
-/* --------------------------- Supabase API calls --------------------------- */
-
-// Initialise client
-const client = useSupabaseClient();
-
-const { data: classesData, error: classesError } = await client
-    .from('classes')
-    .select()
-const { data: namesData, error: namesError } = await client
-    .from('coders')
-    .select()
-const { data: progressData, error: progressError } = await client
-    .from('progress')
-    .select()
-
-const logbookData = ref();
-const { data: data, error: error } = await client
-    .from('logbook')
-    .select(`
-    id,
-    classes (
-      title,
-      time
-    ),
-    coders (
-      full_name
-    ),
-    progress (
-      title,
-      skill
-    ),
-    comment,
-    class_date
-  `)
-
-logbookData.value = data;
-
-let query = ref('')
-let selectedClass = ref({ title: "Select class" })
-let filteredClasses = computed(() =>
-    query.value === ''
-        ? classesData
-        : classesData.filter((x) =>
-            x.title
-                .toLowerCase()
-                .replace(/\s+/g, '')
-                .includes(query.value.toLowerCase().replace(/\s+/g, ''))
-        )
-)
-
-let selectedName = ref({ full_name: "Select name" })
-let filteredNames = computed(() =>
-    query.value === ''
-        ? namesData
-        : namesData.filter((x) =>
-            x.full_name
-                .toLowerCase()
-                .replace(/\s+/g, '')
-                .includes(query.value.toLowerCase().replace(/\s+/g, ''))
-        )
-)
-
-let selectedProgress = ref({ title: "Select progress" })
-let filteredProgress = computed(() =>
-    query.value === ''
-        ? progressData
-        : progressData.filter((x) =>
-            x.title
-                .toLowerCase()
-                .replace(/\s+/g, '')
-                .includes(query.value.toLowerCase().replace(/\s+/g, ''))
-        )
-)
 </script>
 
 <style scoped>
