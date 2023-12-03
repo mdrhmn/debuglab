@@ -1214,7 +1214,8 @@ const onEditSubmit = async (values: any) => {
             .select(`
             id,
             classes (
-            title
+            title,
+            time
             ),
             coders (
             full_name
@@ -1272,7 +1273,8 @@ const onDeleteSubmit = async (values: any) => {
             .select(`
             id,
             classes (
-            title
+            title,
+            time
             ),
             coders (
             full_name
