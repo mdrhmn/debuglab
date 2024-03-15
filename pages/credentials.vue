@@ -66,6 +66,21 @@
         </div>
         <!-- End Card Section -->
 
+        <!-- Buttons -->
+        <div class="gap-3 flex justify-center">
+            <NuxtLink class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-orange-500 text-white hover:bg-orange-600 shadow-sm disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                :to="reportRoute">
+                <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+                Generate Report
+            </NuxtLink>
+        </div>
+        <!-- End Buttons -->
+
         <CredentialsList />
     </div>
     <div v-else>
@@ -82,11 +97,14 @@ useHead({
     title: 'Coder Credentials | Debug Lab'
 })
 
+
 // Initialise client
 const client = useSupabaseClient();
 const route = useRoute();
 // Initialise dayJS
 const dayjs = useDayjs();
+
+const reportRoute = '/generate-report?' + route.query.username;
 
 const { data: coderData, error: coderError } = await client
     .from('coders')
