@@ -180,8 +180,8 @@
                                 <!-- <div>
                                     <p class="text-sm text-gray-800 dark:text-gray-200">{{ data.classes?.title }}</p>
                                 </div> -->
-                                <div>
-                                    <p class="text-sm text-gray-800 dark:text-gray-200">
+                                <div class="mr-4">
+                                    <p class="text-sm text-center text-gray-800 dark:text-gray-200">
                                         <span v-if="data.progress.skill === 'Cadet'"
                                             class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-teal-100 text-teal-800 dark:bg-teal-800/30 dark:text-teal-500">{{
                                             data.progress.title }}</span>
@@ -264,6 +264,13 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+    layout: "default",
+});
+
+useHead({
+    title: 'Progress Report | Debug Lab'
+})
 
 // Initialise client
 const client = useSupabaseClient();
@@ -276,7 +283,7 @@ const { data: classesData, error: classesError } = await client
 const { data: coderData, error: coderError } = await client
     .from('coders')
     .select()
-    .eq('username', "boklim")
+    .eq('username', route.query.username)
     .limit(1)
 const { data: progressData, error: progressError } = await client
     .from('progress')

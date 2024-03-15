@@ -97,14 +97,13 @@ useHead({
     title: 'Coder Credentials | Debug Lab'
 })
 
-
 // Initialise client
 const client = useSupabaseClient();
 const route = useRoute();
 // Initialise dayJS
 const dayjs = useDayjs();
 
-const reportRoute = '/generate-report?' + route.query.username;
+const reportRoute = '/generate-report?username=' + route.query.username;
 
 const { data: coderData, error: coderError } = await client
     .from('coders')
